@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chiikawa.com | The Official Chiikawa Web Site</title>
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'tzw2iyn',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    background: #f4d9e8;
+    background-image: linear-gradient(#ffeef6, #f4d9e8 400px, #f4d9e8);
+    color: #333;
+    font-family: "heisei-maru-gothic-std", "Trebuchet MS", Arial, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 13px;
+    margin: 0;
+  }
+  a { color: #a3005c; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .wrapper {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  /* top utility bar */
+  .utilitybar {
+    background: #7a0040;
+    color: #ffd7ea;
+    font-size: 11px;
+    padding: 4px 10px;
+    text-align: right;
+  }
+  .utilitybar a { color: #ffd7ea; margin-left: 12px; }
+
+  /* header with glossy gradient */
+  .headerbar {
+    background: linear-gradient(#ff6fb5, #d6006f 55%, #b3005c);
+    border-bottom: 4px solid #7a0040;
+    padding: 18px 24px;
+    position: relative;
+    border-radius: 0 0 0 0;
+  }
+  .headerbar table { width: 100%; }
+  .sitetitle {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 0 2px 3px rgba(0,0,0,0.35);
+    margin: 0;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+  }
+  .sitetitle .dotcom { color: #ffe066; }
+  .tagline { color: #ffd7ea; font-size: 13px; margin-top: 2px; }
+  .logo-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #fff;
+    border: 5px solid #ffe066;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+    overflow: hidden;
+    float: right;
+  }
+  .logo-circle img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* glossy nav bar */
+  .navbar {
+    background: linear-gradient(#ffffff, #ffd0e6 45%, #ff9dc7);
+    border-bottom: 1px solid #b3005c;
+    padding: 0;
+  }
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: table;
+    width: 100%;
+  }
+  .navbar li {
+    display: table-cell;
+    text-align: center;
+    border-right: 1px solid #e08fb8;
+  }
+  .navbar a {
+    display: block;
+    padding: 10px 6px;
+    color: #7a0040;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  .navbar a:hover {
+    background: linear-gradient(#fff, #ffe6f2);
+    text-decoration: none;
+  }
+
+  .marquee-strip {
+    background: #ffe066;
+    color: #7a0040;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 4px 0;
+    border-bottom: 2px solid #d6006f;
+  }
+
+  .stamp-card {
+    text-align: center;
+  }
+  .stamp-card .slots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin: 8px 0 4px 0;
+  }
+  .stamp-slot {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px dashed #d6006f;
+    background: #fff5fa;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .stamp-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+  }
+  .stamp-slot.stamped {
+    border-style: solid;
+  }
+  .stamp-slot.stamped img { display: block; }
+  .stamp-note { font-size: 10px; color: #a3005c; }
+
+  /* body layout */
+  .content {
+    background: #ffffff;
+    display: table;
+    width: 100%;
+  }
+  .sidebar {
+    display: table-cell;
+    width: 220px;
+    vertical-align: top;
+    background: #fff5fa;
+    border-right: 1px solid #f0c0d8;
+    padding: 16px;
+  }
+  .maincol {
+    display: table-cell;
+    vertical-align: top;
+    padding: 20px 26px;
+  }
+
+  .box {
+    background: #ffffff;
+    border: 1px solid #f0b8d4;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+  .box h2 {
+    background: linear-gradient(#ff8fc0, #d6006f);
+    color: #fff;
+    margin: -16px -16px 14px -16px;
+    padding: 8px 14px;
+    border-radius: 8px 8px 0 0;
+    font-size: 16px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  }
+
+  .side-box {
+    background: #ffffff;
+    border: 1px solid #f0b8d4;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 16px;
+    font-size: 12px;
+  }
+  .side-box h3 {
+    background: #d6006f;
+    color: #fff;
+    margin: -10px -10px 8px -10px;
+    padding: 5px 10px;
+    border-radius: 6px 6px 0 0;
+    font-size: 12px;
+  }
+
+  .gallery-thumb {
+    border: 3px solid #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+    border-radius: 4px;
+    margin: 4px;
+  }
+
+  .btn {
+    display: inline-block;
+    background: linear-gradient(#ff8fc0, #d6006f);
+    color: #fff !important;
+    padding: 8px 18px;
+    border-radius: 5px;
+    border: 1px solid #a3005c;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+    font-weight: bold;
+    font-size: 12px;
+  }
+  .btn:hover { background: linear-gradient(#ffa8d0, #e6007a); text-decoration: none; }
+
+  footer {
+    background: #7a0040;
+    color: #ffd7ea;
+    text-align: center;
+    font-size: 11px;
+    padding: 14px;
+    border-top: 4px solid #b3005c;
+  }
+  footer a { color: #ffd7ea; }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <div class="utilitybar">
+    <a href="#">Site Map</a><a href="#">Newsletter</a><a href="#">Contact Us</a>
+  </div>
+
+  <div class="headerbar">
+    <div class="logo-circle">
+      <img src="images/chiikawa_circle.gif" alt="Chiikawa">
+    </div>
+    <h1 class="sitetitle">CHIIKAWA<span class="dotcom">.com</span></h1>
+    <div class="tagline">The Official Chiikawa Web Site</div>
+  </div>
+
+  <div class="navbar">
+    <ul>
+      <li><a href="#about">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#comics">Comics</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="marquee-strip">
+    <marquee scrollamount="5">【おしらせ】 ちいかわの新しいグッズが登場！ &nbsp;&nbsp;|&nbsp;&nbsp; Check out the latest gallery updates! &nbsp;&nbsp;|&nbsp;&nbsp; 【おしらせ】 ちいかわの新しいグッズが登場！</marquee>
+  </div>
+
+  <div class="content">
+    <div class="sidebar">
+      <div class="side-box">
+        <h3>QUICK LINKS</h3>
+        <a href="#about">【NEW】 About Chiikawa</a><br>
+        <a href="#gallery">≫ Photo Gallery</a><br>
+        <a href="#comics">≫ Comics</a><br>
+        <a href="#contact">≫ Contact Us</a>
+      </div>
+
+      <div class="side-box stamp-card">
+        <h3>スタンプラリー (Stamp Card)</h3>
+        <div class="slots">
+          <div class="stamp-slot" onclick="stampIt(this)"><img src="images/newstamp1.gif" alt="stamp"></div>
+          <div class="stamp-slot" onclick="stampIt(this)"><img src="images/newstamp2.gif" alt="stamp"></div>
+          <div class="stamp-slot" onclick="stampIt(this)"><img src="images/newstamp3.gif" alt="stamp"></div>
+        </div>
+        <div class="slots">
+          <div class="stamp-slot" onclick="stampIt(this)"><img src="images/newstamp4.gif" alt="stamp"></div>
+          <div class="stamp-slot" onclick="stampIt(this)"><img src="images/newstamp5.gif" alt="stamp"></div>
+          <div class="stamp-slot" onclick="stampIt(this)"><img src="images/newstamp6.gif" alt="stamp"></div>
+        </div>
+        <div class="slots">
+          <div class="stamp-slot" onclick="stampIt(this)"><img src="images/newstamp7.gif" alt="stamp"></div>
+          <div class="stamp-slot" onclick="stampIt(this)"><img src="images/newstamp8.gif" alt="stamp"></div>
+          <div class="stamp-slot" onclick="stampIt(this)"><img src="images/newstamp9.gif" alt="stamp"></div>
+        </div>
+        <div class="stamp-note">Click a slot to collect a stamp!</div>
+      </div>
+
+      <div class="side-box">
+        <h3>日本語版</h3>
+        <a href="#">日本語版はこちら &raquo;</a>
+      </div>
+
+      <div class="side-box">
+        <h3>SITE INFO</h3>
+        &copy; Chiikawa Project.<br>All rights reserved.<br>
+        Best viewed at 1024x768.
+      </div>
+      <a class="btn" href="#gallery">View Gallery &raquo;</a>
+    </div>
+
+    <div class="maincol">
+
+      <a name="about"></a>
+      <div class="box">
+        <h2>ABOUT CHIIKAWA</h2>
+        <table>
+          <tr>
+            <td width="130" valign="top"><img src="images/chiikawa_main.gif" alt="Chiikawa" width="120" height="120" style="border-radius:6px; box-shadow:0 2px 5px rgba(0,0,0,0.2);"></td>
+            <td valign="top" style="padding-left:16px;">
+              <p>Welcome to the official home of Chiikawa online! Chiikawa is a character from Japan whose name means "something small and cute." Chiikawa does its best every day alongside its friends — thanks for stopping by!</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <a name="gallery"></a>
+      <div class="box">
+        <h2>GALLERY</h2>
+        <p>Meet the whole gang! Click a picture to see it full size!</p>
+        <a href="images/stamp_chii.gif"><img class="gallery-thumb" src="images/stamp_chii.gif" width="90" height="90"></a>
+        <a href="images/stamp_hachi.gif"><img class="gallery-thumb" src="images/stamp_hachi.gif" width="90" height="90"></a>
+        <a href="images/stamp_usagi.gif"><img class="gallery-thumb" src="images/stamp_usagi.gif" width="90" height="90"></a>
+        <a href="images/stamp_kuri.gif"><img class="gallery-thumb" src="images/stamp_kuri.gif" width="90" height="90"></a>
+        <a href="images/stamp_momonga.gif"><img class="gallery-thumb" src="images/stamp_momonga.gif" width="90" height="90"></a>
+        <a href="images/stamp_rakko.gif"><img class="gallery-thumb" src="images/stamp_rakko.gif" width="90" height="90"></a>
+        <a href="images/stamp_shisa.gif"><img class="gallery-thumb" src="images/stamp_shisa.gif" width="90" height="90"></a>
+        <a href="images/stamp_kani.gif"><img class="gallery-thumb" src="images/stamp_kani.gif" width="90" height="90"></a>
+      </div>
+
+      <a name="comics"></a>
+      <div class="box">
+        <h2>COMICS</h2>
+        <p>A little Chiikawa comic strip — click to view full size!</p>
+        <a href="images/pic3_full.gif"><img class="gallery-thumb" src="images/pic3_thumb.gif" width="180"></a>
+        <a href="images/pic4_full.gif"><img class="gallery-thumb" src="images/pic4_thumb.gif" width="180"></a>
+      </div>
+
+      <a name="contact"></a>
+      <div class="box">
+        <h2>CONTACT US</h2>
+        <p>Questions or comments? Email us at <a href="mailto:info@chiikawa-official.co.jp">info@chiikawa-official.co.jp</a>.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    &copy; Chiikawa Project. All Rights Reserved.<br>
+    <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Contact Us</a><br>
+    <span style="font-size:10px;">推奨ブラウザ: Internet Explorer 6.0 / Netscape 7.0</span>
+  </footer>
+
+</div>
+
+<script>
+  function stampIt(el) {
+    el.classList.add('stamped');
+  }
+</script>
+
+</body>
+</html>
